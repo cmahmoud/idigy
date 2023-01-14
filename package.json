@@ -4,7 +4,12 @@
     "description": "idigy is package to generate unique ids",
     "main": "./lib/cjs/index.js",
     "module": "./lib/index.js",
-    "types": "./lib/index.d.ts",
+    "types": "./lib/types/index.d.ts",
+    "exports": {
+        "import": "./lib/index.js",
+        "require": "./lib/cjs/index.js",
+        "default": "./lib/index.js"
+    },
     "scripts": {
         "test": "jest",
         "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json"

@@ -6,7 +6,9 @@
         "esModuleInterop": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
-        "declaration": true
+        "declaration": true,
+        "moduleResolution": "Node",
+        "declarationDir": "lib/types"
     },
     "include": ["src/**/*"],
     "exclude": ["test", "node_modules"]
