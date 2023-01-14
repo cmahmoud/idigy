@@ -1,10 +1,3 @@
-import { range, uuid, normal } from "./helpers";
-import { Idigy } from "./types";
+import idigy from "./helpers";
 
-const idigy: Idigy = {
-    pattern: "xxxx-xxxx-xxxx-xxxx",
-    range,
-    uuid,
-    normal,
-};
 export default idigy;

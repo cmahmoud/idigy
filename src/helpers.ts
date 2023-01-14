@@ -9,7 +9,7 @@ import { Idigy } from "./types";
  * range(1000) // 992
  * ```
  */
-export function range(min: number, max?: number): number {
+function range(min: number, max?: number): number {
     if (max && max < min) {
         throw new Error(
             "(max) parameter is must be bigger than (min) parameter"
@@ -29,7 +29,7 @@ export function range(min: number, max?: number): number {
  * uuid() // 0c66-275b-e9bd-e6ce
  * ```
  */
-export function uuid(this: Idigy): string {
+function uuid(this: Idigy): string {
     const id = this.pattern.replace(/[x]/g, function () {
         return Math.round(Math.random() * 16)
             .toString(16)
@@ -46,7 +46,7 @@ export function uuid(this: Idigy): string {
  * normal(20) // d7ec675a105114167e865
  * ```
  */
-export function normal(length = 10): string {
+function normal(length = 10): string {
     const generated = Math.floor(
         Math.pow(10, length - 1) + Math.random() * 9 * Math.pow(10, length - 1)
     );
@@ -56,3 +56,10 @@ export function normal(length = 10): string {
     );
     return generatedId.join("").substring(0, length);
 }
+const idigy: Idigy = {
+    pattern: "xxxx-xxxx-xxxx-xxxx",
+    range,
+    uuid,
+    normal,
+};
+export default idigy;
