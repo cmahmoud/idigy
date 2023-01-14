@@ -4,7 +4,6 @@
     "description": "idigy is package to generate unique ids",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
-    "type": "module",
     "scripts": {
         "test": "jest",
         "build": "tsc"
